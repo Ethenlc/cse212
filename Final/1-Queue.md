@@ -35,3 +35,36 @@ class Queue:
 
     def size(self):
         return len(self.queue)
+```
+
+
+## Efficiency of Queue Operations
+
+### Enqueue Operation
+In Python, appending an element to the end of a list using the `append()` method takes constant time on average, denoted as O(1).
+
+### Dequeue Operation
+In Python, using `pop(0)` to remove the first element of a list has a time complexity of O(n), where n is the number of elements in the queue.
+
+### Size Checking
+Checking the size of the queue is efficient in Python, typically taking constant time regardless of the number of elements. This is done using the `len()` function.
+
+
+## Image of Queue Data Structure
+
+![Alt text](images/Queue-Img1.png)
+Here is a great image I found representing how a queue works. The link for the website is [here](https://www.geeksforgeeks.org/queue-data-structure/).
+
+
+## Challenge: Implementing a Circular Queue
+
+A circular queue is a variation of the standard queue data structure in which the last element is connected back to the first element, forming a circular arrangement. This allows for efficient utilization of memory and avoids the need for shifting elements when dequeuing.
+
+Your challenge is to implement a circular queue in Python. You need to define a class `CircularQueue` with the following methods:
+
+- `enqueue(self, item)`: Adds an element to the rear of the circular queue.
+- `dequeue(self)`: Removes an element from the front of the circular queue.
+- `is_empty(self)`: Returns True if the circular queue is empty, False otherwise.
+- `is_full(self)`: Returns True if the circular queue is full, False otherwise.
+
+You should handle the case when the circular queue becomes full, and attempting to enqueue more elements should result in an error or resizing the queue if needed.

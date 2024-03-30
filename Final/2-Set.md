@@ -4,6 +4,7 @@
 
 In Python, a **set** is an unordered collection of unique elements. Sets are used to store distinct items and perform set operations such as union, intersection, difference, and more.
 
+
 ## What is a Set?
 
 A set is a collection of elements without any duplicate entries. Each element in a set is unique, and the order of elements is not guaranteed. Sets are mutable, meaning you can add or remove elements from them.
@@ -13,6 +14,7 @@ Sets are commonly used when dealing with collections of unique items, such as:
 - Removing duplicates from a list.
 - Checking membership of an element.
 - Performing set operations like union, intersection, and difference.
+
 
 ## Implementations of Sets:
 
@@ -82,3 +84,35 @@ print("Is set1 a subset of set2?", subset_check)  # Output: False
 superset_check = set1.issuperset(set2)
 print("Is set1 a superset of set2?", superset_check)  # Output: False
 ```
+
+
+## Efficiency of Set Operations
+
+### Adding Elements
+Adding an element to a set is typically very efficient. In Python, the `add()` method has an average time complexity of O(1).
+
+### Removing Elements
+Similarly, removing an element from a set is also very efficient. In Python, both the `remove()` and `discard()` methods have an average time complexity of O(1).
+
+### Checking Membership
+Checking whether an element is present in a set is highly efficient. In Python, using the `in` operator to check membership has an average time complexity of O(1).
+
+### Set Operations
+Set operations such as union, intersection, and difference can vary in efficiency depending on the size of the sets involved. In Python, these operations are typically implemented using hash tables, resulting in average time complexities of O(n).
+
+
+## Images of Set Data Structure
+
+![Alt text](images/insert_set.png)
+This is a visual representation of inserting an element into a set.
+
+![Alt text](images/remove_set.png)
+This is a visual representation of removing an element from a set.
+
+Both of these images can be found on the following website:
+[GeeksForGeeks.org](https://www.geeksforgeeks.org/introduction-to-set-data-structure-and-algorithm-tutorials/)
+
+
+## Challenge: Finding Common Elements
+
+Write a Python function `find_common_elements(set1, set2)` that takes two sets `set1` and `set2` as input and returns a new set containing the elements that are common to both sets.
